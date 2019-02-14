@@ -1,0 +1,2 @@
+# cat=plugin.tx_nxajaxpluginpage//a; type=string; label=Those tt_content list_types are allowed to return AJAX responses
+plugin.tx_nxajaxpluginpage.list_type.json =
