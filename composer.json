@@ -5,9 +5,17 @@
     "php": ">=7.0.0",
     "typo3/cms-core": "^8.7.0 || ^9.1"
   },
+  "require-dev": {
+    "typo3/testing-framework": "^2.0"
+  },
   "autoload": {
     "psr-4": {
       "Netlogix\\Nxajaxpluginpage\\": "Classes"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Netlogix\\Nxajaxpluginpage\\Tests\\": "Tests"
     }
   },
   "replace": {

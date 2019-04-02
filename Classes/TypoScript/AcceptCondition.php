@@ -21,8 +21,8 @@ class AcceptCondition extends AbstractCondition
 			return current($header);
 		}, GeneralUtility::trimExplode(',', $_SERVER['HTTP_ACCEPT']));
 
-		$allowedHeaders = preg_split('%[^a-z0-9/]%i', join(',', $conditionParameters));
+		$allowedHeaders = preg_split('%[^a-z0-9+./-]%i', join(',', $conditionParameters));
 
-		return count(array_intersect($requestedHeaders, $allowedHeaders));
+		return !!count(array_intersect($requestedHeaders, $allowedHeaders));
 	}
 }
