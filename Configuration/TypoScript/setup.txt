@@ -22,6 +22,7 @@
             select {
                   pidInList = this
                   orderBy = sorting
+                  includeRecordsWithoutDefaultTranslation = 1
                   where {
                       stdWrap.cObject = TEXT
                       stdWrap.cObject {
