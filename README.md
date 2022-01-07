@@ -8,4 +8,4 @@ contains a `Accept: application/json` header.
 # Usage
 
 The extension is configured through TypoScript. The relevant settings are in constants
-(see `constants.txt` for all configuration values and their descriptions).
+(see `Constants.typoscript` for all configuration values and their descriptions).
