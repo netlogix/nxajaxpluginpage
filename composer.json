@@ -1,5 +1,6 @@
 {
   "name": "netlogix/nxajaxpluginpage",
+  "description": "Render AJAX plugins based on ACCEPT headers",
   "type": "typo3-cms-extension",
   "license": "MIT",
   "require": {
