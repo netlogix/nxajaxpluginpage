@@ -1,10 +1,10 @@
 <?php
 
-namespace Netlogix\Nxajaxpluginpage\Test\Unit\Service;
+namespace Netlogix\Nxajaxpluginpage\Tests\Unit\Service;
 
 use Netlogix\Nxajaxpluginpage\Service\AcceptContentToHashBaseService;
 use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
-use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
+use Nimut\TestingFramework\TestCase\UnitTestCase;
 
 class AcceptContentToHashBaseServiceTest extends UnitTestCase
 {
@@ -14,7 +14,7 @@ class AcceptContentToHashBaseServiceTest extends UnitTestCase
 	public function acceptHeaderFromServerVarGetsPassedToHashBase()
 	{
 		$_SERVER = ['HTTP_ACCEPT' => 'some/test'];
-		$hashBase = ['hashParameters' => ''];
+		$hashBase = ['hashParameters' => []];
 
 		$service = new AcceptContentToHashBaseService();
 
@@ -34,7 +34,7 @@ class AcceptContentToHashBaseServiceTest extends UnitTestCase
 	public function acceptHeaderFromServerVarCreatesEmptyHashBaseProperty()
 	{
 		$_SERVER = [];
-		$hashBase = ['hashParameters' => ''];
+		$hashBase = ['hashParameters' => []];
 
 		$service = new AcceptContentToHashBaseService();
 
