@@ -4,6 +4,7 @@ clean:
 	rm -rf .Build/
 
 deps:
+	mkdir -p .Build/logs/coverage/
 	composer install
 
 update:
@@ -16,7 +17,6 @@ test:
 	XDEBUG_MODE=coverage .Build/bin/phpunit-merger coverage .Build/logs/coverage/ --html=.Build/logs/html/ .Build/logs/clover.xml
 	# merge into php coverage
 	.Build/bin/phpcov merge --php .Build/logs/coverage.php .Build/logs/coverage/
-	# this is currently buggy and will merge into empty results
 	.Build/bin/phpunit-merger log .Build/logs/junit/ .Build/logs/junit.xml
 
 ci:
