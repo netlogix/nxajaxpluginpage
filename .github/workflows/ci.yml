@@ -9,7 +9,7 @@ permissions:
 jobs:
   test:
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     name: TYPO3 ${{ matrix.typo3}} on PHP ${{ matrix.php }}
 
@@ -72,7 +72,7 @@ jobs:
     # only run on pull request
     if: github.event_name == 'pull_request'
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     name: Create Test Result Report
 

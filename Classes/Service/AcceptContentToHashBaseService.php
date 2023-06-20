@@ -11,12 +11,12 @@ use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
  */
 class AcceptContentToHashBaseService implements SingletonInterface
 {
-	/**
-	 * @param array $params
-	 * @param TypoScriptFrontendController $typoScriptFrontendController
-	 */
-	public function createHashBase(array &$params, TypoScriptFrontendController $typoScriptFrontendController)
-	{
-		$params['hashParameters'][AcceptContentToHashBaseService::class] = isset($_SERVER['HTTP_ACCEPT']) ? $_SERVER['HTTP_ACCEPT'] : '';
-	}
+    /**
+     * @param array $params
+     * @param TypoScriptFrontendController $typoScriptFrontendController
+     */
+    public function createHashBase(array &$params, TypoScriptFrontendController $typoScriptFrontendController)
+    {
+        $params['hashParameters'][AcceptContentToHashBaseService::class] = isset($_SERVER['HTTP_ACCEPT']) ? $_SERVER['HTTP_ACCEPT'] : '';
+    }
 }
