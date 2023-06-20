@@ -5,7 +5,7 @@
   "license": "MIT",
   "require": {
     "php": "^7.4 || ^8.0",
-    "typo3/cms-core": "^10.4 || ^11.5"
+    "typo3/cms-core": "^10.4 || ^11.5 || ^12.4"
   },
   "require-dev": {
     "ext-sqlite3": "*",
@@ -26,7 +26,7 @@
   "extra": {
     "typo3/cms": {
       "extension-key": "nxajaxpluginpage",
-      "web-dir": ".Build/Web",
+      "web-dir": ".Build/public",
       "cms-package-dir": "{$vendor-dir}/typo3/cms"
     }
   },
