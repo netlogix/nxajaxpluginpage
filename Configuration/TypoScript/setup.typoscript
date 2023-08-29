@@ -1,4 +1,4 @@
-[traverse(request.getHeaders(), 'accept/0') matches '/^application\\/json/']
+[traverse(request?.getHeaders(), 'accept/0') matches '/^application\\/json/']
 
     tt_content.list.20 = CASE
     tt_content.list.20 {
