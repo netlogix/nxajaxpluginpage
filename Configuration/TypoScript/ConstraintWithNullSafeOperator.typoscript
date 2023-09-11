@@ -1,0 +1,3 @@
+[traverse(request?.getHeaders(), 'accept/0') matches '/^application\\/json/']
+  @import 'EXT:nxajaxpluginpage/Configuration/TypoScript/AjaxResponse.typoscript'
+[END]
