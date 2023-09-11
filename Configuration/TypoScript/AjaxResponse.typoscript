@@ -1,0 +1,44 @@
+tt_content.list.20 = CASE
+tt_content.list.20 {
+  key.field = list_type
+}
+
+page >
+page = PAGE
+page {
+  config {
+    disableAllHeaderCode = 1
+    disablePrefixComment = 1
+    additionalHeaders {
+      1526302502.header = Content-Type: application/json;charset=utf-8
+    }
+  }
+
+  10 = CONTENT
+  10 {
+    table = tt_content
+    select {
+      pidInList = this
+      orderBy = sorting
+      includeRecordsWithoutDefaultTranslation = 1
+      where {
+        stdWrap.cObject = TEXT
+        stdWrap.cObject {
+          value = {$plugin.tx_nxajaxpluginpage.list_type.json}
+          split {
+            token = ,
+            cObjNum = 1
+            1 {
+              current = 1
+              trim = 1
+              wrap = "|",
+            }
+
+          }
+        }
+        wrap = (list_type IN (|"not-a-valid-listtype"))
+      }
+    }
+    renderObj = < tt_content.list.20
+  }
+}
