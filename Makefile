@@ -21,3 +21,9 @@ test:
 
 ci:
 	act --platform ubuntu-20.04=shivammathur/node:2004
+
+coding-standards:
+	composer rector:fix
+	composer composer:normalize:fix
+	composer php:lint
+	./prettier.sh --write
